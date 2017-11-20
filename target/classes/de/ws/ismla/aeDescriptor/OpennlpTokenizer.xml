@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>de.ws.ismla.ae.OpennlpTokenizer</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>OpennlpTokenizer</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters>
+      <configurationParameter>
+        <name>opennlp_en_tokenizer_model</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+    <configurationParameter>
+        <name>opennlp_en_postagger_model</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>opennlp_en_tokenizer_model</name>
+        <value>
+          <string>src/main/resources/de/ws/ismla/models/en-token.bin</string>
+        </value>
+      </nameValuePair>
+    <nameValuePair>
+        <name>opennlp_en_postagger_model</name>
+        <value>
+          <string>src/main/resources/de/ws/ismla/models/en-pos-maxent.bin</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <typeSystemDescription>
+      <imports>
+        <import name="typeSystemDescriptor"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">de.ws.ismla.tokenizer.types.Sentence</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">de.ws.ismla.tokenizer.types.Token</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

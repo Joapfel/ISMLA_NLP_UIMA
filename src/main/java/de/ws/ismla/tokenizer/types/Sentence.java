@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** a sentence
- * Updated by JCasGen Tue Oct 31 13:45:40 CET 2017
- * XML source: /home/johannes/workspace_industrial_strength/NaiveTokenizer/src/main/resources/typeSystemDescriptor.xml
+ * Updated by JCasGen Mon Nov 13 22:00:38 CET 2017
+ * XML source: /home/johannes/workspace_industrial_strength/NaiveTokenizer/src/main/resources/de/ws/ismla/collectionReader/SingleLineReader.xml
  * @generated */
 public class Sentence extends Annotation {
   /** @generated

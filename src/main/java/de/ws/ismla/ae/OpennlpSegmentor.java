@@ -22,9 +22,9 @@ public class OpennlpSegmentor extends JCasAnnotator_ImplBase {
 	//contains relative path to the model
 	final private String SEGMENTOR_EN = "opennlp_en_segmentor_model";
 	
-	InputStream streamIn;
-	SentenceModel model;
-	SentenceDetectorME detector;
+	private InputStream streamIn;
+	private SentenceModel model;
+	private SentenceDetectorME detector;
 	
 	@Override
 	public void initialize(UimaContext aContext) throws ResourceInitializationException {
@@ -34,7 +34,7 @@ public class OpennlpSegmentor extends JCasAnnotator_ImplBase {
 		try {
 			
 			//get absolute path from relative one
-			String path = new File((String)aContext.getConfigParameterValue(SEGMENTOR_EN)).getAbsolutePath();
+			String path = (String)aContext.getConfigParameterValue(SEGMENTOR_EN);
 			//get the model file
 			streamIn = new FileInputStream(path);
 			//init the model
@@ -57,6 +57,7 @@ public class OpennlpSegmentor extends JCasAnnotator_ImplBase {
 		
 		String document = arg0.getDocumentText();
 		
+		//idx of the sentences
 		Span spans[] = detector.sentPosDetect(document);
 		
 		for(Span span : spans){

@@ -10,10 +10,10 @@
     <configurationParameters searchStrategy="language_fallback">
       <configurationParameter>
         <name>opennlp_en_segmentor_model</name>
-        <description>path to the model</description>
+        <description>path to the sentence detector model</description>
         <type>String</type>
         <multiValued>false</multiValued>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
       </configurationParameter>
     </configurationParameters>
     <configurationParameterSettings>
